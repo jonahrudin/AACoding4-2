@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,20 +19,53 @@
 <body translate="no">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<audio id="Up" controls>
+<source src="https://ia801600.us.archive.org/1/items/255PixarsUpMedleyMarriedLife/255%20Pixar%27s%20Up%20Medley%20%28Married%20Life%29.mp3" type="audio/mpeg">
+</audio>
 <audio id="sad" controls>
-<source src="snd/sad.mp3" type="audio/mpeg">
+<source src="https://math.seattleacademy.org/garyanderson/snd/sad.mp3" type="audio/mpeg">
 </audio>
 <div>Timer: <span id="theTimer">0</span> Score: <span id="score">0</span></div>
 <h1>Gary's Awesome Math Problems</h1>
 <ol>
-<li> \( 2^3 \) <input data-correct="8" /> </li>
-<li> \( \sqrt[3]{8} \) <input data-correct="2" /></li>
-<li> \( 8^\frac{1}{3} \) <input data-correct="2" /></li>
-<li> \( 27^\frac{-2}{3} \) <input data-correct="1/9" /></li>
+Above on the left is background music if you would like. Enjoy!
+<li>\( 5 * \sqrt[2]{9} \)
+<input data-correct="15" />
+</li>
+<li>If Gary likes 10 students, and has 20 students how many students does Gary dislike?
+<input data-correct="10" />
+</li>
+<li>\( 15 / \sqrt[2]{9} = 5 \)
+<input data-correct="True" />
+</li>
+<li>\( \sqrt[3]{27} * \sqrt[2]{9} \)
+<input data-correct="9" />
+</li>
+<li> X^2 = 4
+<input data-correct="2, -2" />
+</li>
+<li>Jonah and Tate make up 2/5 of Gary's best friends; how many best friends does Gary have?
+<input data-correct="5" />
+</li>
+<li>\(\sqrt[2]{1} * \sqrt[2]{1} \)
+<input data-correct="1" />
+</li>
+<li>\(\sqrt[2]{9} \)
+<input data-correct="3" />
+</li>
+<li>5 * 10
+<input data-correct="50" />
+</li>
+<li>\( 9^{1/2} \)
+<input data-correct="3" />
+</li>
 <ol>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script id="rendered-js">
 const sad = document.getElementById("sad");
+
+const Up = document.getElementById("Married Life");
+
 setInterval(onTimer, 1000);
 function onTimer() {
   let theTimer = Number($("#theTimer").text());
@@ -55,10 +89,11 @@ function onChange(evt) {
     $(this)
       .removeClass("correct")
       .addClass("incorrect");
-    if (Math.random() > 0.9) {
+    if (Math.random() > 0.0) {
       sad.play();
     }
-  }
+    
+  } 
 }
     </script>
 </body>
